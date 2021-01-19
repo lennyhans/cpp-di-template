@@ -14,6 +14,7 @@ int main() {
 
     // racecar is independent from the implementation of the fuel service.
     // a gas station service is injected.
+    // How to pass the cpp pointer ? https://stackoverflow.com/a/30905560
     std::unique_ptr<Car> racecar = std::unique_ptr<Car>(new Car(stationService.get()));
     racecar->getGasoline();
 
