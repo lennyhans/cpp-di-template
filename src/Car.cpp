@@ -1,6 +1,6 @@
 #include <iostream>
-#include "GasolineSource.h"
-#include "Car.h"
+#include "GasolineSource.hpp"
+#include "Car.hpp"
 
 
 
@@ -17,6 +17,6 @@ Car::Car(GasolineSource *service)
 void Car::getGasoline() {
     std::cout << "Car needs more gasoline!" << std::endl;
     // Abstract away the dependency implementation with polymorphism.
-    gasolineService->FuelUp();
+    m_last_gas_amount = gasolineService->FuelUp(m_gas_needed);
 }
 

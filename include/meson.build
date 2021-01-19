@@ -1,9 +1,9 @@
 # Select header files to be installed
 install_headers([
-	'GasolineSource.h',
-	'GasStation.h',
-	'FuelCan.h',
-	'Car.h'
+	'GasolineSource.hpp',
+	'GasStation.hpp',
+	'FuelCan.hpp',
+	'Car.hpp'
 ])
 
 

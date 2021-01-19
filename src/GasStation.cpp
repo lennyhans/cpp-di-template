@@ -1,15 +1,8 @@
 #include <iostream>
-#include "GasStation.h"
+#include "GasStation.hpp"
 
 
-void GasStation::FuelUp(){
+int GasStation::FuelUp(const int fuel_amount){
         std::cout << "Pumping gas at gas station" << std::endl;
+        return 0;
 }
-/*
-class GasStation : public GasolineSource {
-public:
-    void FuelUp() {
-        std::cout << "Pumping gas at gas station" << std::endl;
-    }
-};
-*/

@@ -1,10 +1,18 @@
-testexe = executable(
-    'testexe', 
-    'car_test.cpp', 
+test_libgasoline = executable(
+    'test_libgasoline-bin',
+    ['fuelcan_test.cpp'],
     include_directories : inc, 
-    link_with : libcar) 
+    link_with : libgasoline)
 
-test('Car test', testexe) 
+test_libcar = executable(
+    'test_libcar-bin',
+    ['car_test.cpp'],
+    include_directories : inc,
+    link_with : [libcar, libgasoline])
 
-test('Car test with args and env', testexe, args : ['arg1', 'arg2'], env : ['FOO=bar']) 
+test('Gasoline test', test_libgasoline)
+
+test('Car test', test_libcar)
+
+# test('Car test with args and env', testexe, args : ['arg1', 'arg2'], env : ['FOO=bar'])
 
