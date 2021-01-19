@@ -3,7 +3,13 @@
 #include "FuelCan.hpp"
 #include <iostream>
 #include <memory>
-
+/*
+ * Reference code
+ * https://www.codymorterud.com/design/2018/09/07/dependency-injection-cpp.html
+ *
+ * Useful reference as well
+ * https://vladris.com/blog/2016/07/06/dependency-injection-in-c.html
+*/
 int main() {
 
     // As seen in https://github.com/lefticus/cppbestpractices/blob/master/04-Considering_Safety.md
