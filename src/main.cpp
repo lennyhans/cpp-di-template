@@ -6,6 +6,7 @@
 
 int main() {
 
+    // As seen in https://github.com/lefticus/cppbestpractices/blob/master/04-Considering_Safety.md
     std::unique_ptr<GasolineSource> stationService = std::unique_ptr<GasolineSource>(new GasStation());
     auto canService = std::unique_ptr<GasolineSource>(new FuelCan());
     //GasolineSource *canService = new FuelCan();
