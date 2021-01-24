@@ -18,6 +18,18 @@ TEST_CASE("Car Test")
         auto stationService = std::unique_ptr<GasolineSource>(new GasStation());
 
         auto target = std::unique_ptr<Car>(new Car(stationService.get()));
+
+
+        SUBCASE(" move forward"){
+            int gas_loaded = 1000; // Mililiters
+
+            target->m_gasoline = gas_loaded;
+            target->m_performance = 18; // Km/L
+            int consumed_gas = target->move(1000); // Meters
+            int expected_remaining_gas = 55; // Meters / performance
+            CHECK(expected_remaining_gas == consumed_gas);
+            REQUIRE(target->m_gasoline == gas_loaded - consumed_gas );
+        }
         target->getGasoline();
         stationService = NULL;
         // If assertion fails test execution continues

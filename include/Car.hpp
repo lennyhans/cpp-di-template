@@ -12,6 +12,10 @@ public:
     Car(GasolineSource *service);
     int m_last_gas_amount;
     int m_gas_needed;
+    int m_gasoline;
+    int m_performance;
+    int move( int meters);
+
     void getGasoline();
 };
 
